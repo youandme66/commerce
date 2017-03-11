@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html ng-app="INeeding">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>INeeding</title>
+    <link rel="stylesheet" href="libs/mui/dist/css/mui.min.css" />
+    <link rel="stylesheet" href="css/app1.css" />
+    <link rel="stylesheet" href="css/iconfont.css">
+  </head>
+
+  <body ng-controller="HomeController">
+
+<nav class="mui-bar mui-bar-tab">
+    <a class="bottom_nav" ng-href="/home">
+        <span class="mui-icon iconfont icon-juxing121"></span>
+        <br/ >
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="bottom_nav" href="/school">
+        <span class="mui-icon iconfont icon-zhuye03"></span>
+        <br/ >
+        <span class="mui-tab-label">学校</span>
+    </a>
+    <a class="bottom_nav" ng-href="/messages">
+        <span class="mui-icon iconfont icon-time2"></span>
+        <br/ >
+        <span class="mui-tab-label">消息</span>
+    </a>
+    <a class="bottom_nav" ng-href="/person">
+        <span class="mui-icon  iconfont icon-person1"></span>
+        <br/ >
+        <span class="mui-tab-label">我的</span> 
+    </a>
+</nav>
+    <header class="mui-bar mui-bar-nav" ng-show="global.show_search">
+    <span class="mui-icon mui-icon-closeempty return" ng-click="hide_search()"></span>
+    <div class="search">
+         <div class="mui-input-row mui-search">         
+            <input type="search" class="mui-input-clear" placeholder="" ng-model = "data.keyword">
+         </div>     
+     </div>  
+     <span class="mui-icon mui-icon-undo next" ng-click="search_enter()"></span>   
+    </header> 
+    <header class="mui-bar mui-bar-nav" ng-show ="global.show_header">
+
+      <div class="headerImg">
+        <div class="title">
+          <span class="little">Little</span>
+          <span class="box">Box</span>
+        </div>
+        <div class="headerImg2">
+          <span class="mui-icon iconfont icon-search" ng-click="show_search()"></span>
+        </div>
+        <div class="headerImg3">
+          <a class="mui-icon iconfont icon-publish" href="/post"></a>
+        </div>
+      </div>
+
+    </header>
+
+
+    <div class="mui-content">
+      <div id="tabbar" class="mui-control-content mui-active"  >		
+
+        <div class="mui-slider" ng-show='global.show_nav'>
+          <div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" ng-show="global.show_nav_top">
+            <a class="mui-control-item" href="#item1">租客一族</a>
+            <a class="mui-control-item" href="#item2">帮客一族</a>
+          </div>
+            <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4" ng-show="global.show_slider"></div>
+
+            <div class="mui-slider-group">
+              <div id="item1" class="mui-slider-item mui-control-content mui-active">
+
+                <div id="slider" class="mui-slider" ng-show="global.show_nav"><!--轮播开始-->
+
+                  <div class="mui-slider-group mui-slider-loop">
+
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                      <a href="#">
+                        <img src="images/home.png">
+                      </a>
+                    </div>
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                      <a href="#">
+                        <img src="images/home.png">
+                      </a>
+                    </div>
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                      <a href="#">
+                        <img src="images/home.png">
+                      </a>
+                    </div>
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                      <a href="#">
+                        <img src="images/home.png">
+                      </a>
+                    </div>
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                      <a href="#">
+                        <img src="images/home.png">
+                      </a>
+                    </div>
+
+                  </div>
+
+                  <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                  </div>
+
+                </div><!-- 轮播图结束 -->
+
+              </div>
+              <div id="item2" class="mui-slider-item mui-control-content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">主人尚在开发中...</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+           <div ng-view id="view_content" class="mui-content"></div>
+        </div>
+
+       
+      </div>
+
+  </body>
+
+  <script src="/libs/angular/angular.min.js"></script>
+  <script src="/libs/angular-route/angular-route.min.js"></script>
+  <script src="/libs/mui/dist/js/mui.min.js"></script>
+  <script src="/libs/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/libs/angular-cookies/angular-cookies.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/filters.js"></script>
+  <script src="/javascripts/services.js"></script>
+  <script src="/javascripts/directives.js"></script>
+  <script src="/javascripts/router.js"></script>
+  <script src="/javascripts/controllers.js"></script>
+
+  <script type="text/javascript" charset="utf-8">
+      mui.init();
+  </script>
+  <script type="text/javascript">
+angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+  </script>
+
+  <script type="text/javascript" src="js/ineed.js"></script>
+
+</html>

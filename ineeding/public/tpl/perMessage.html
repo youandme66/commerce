@@ -1,0 +1,85 @@
+<header class="mui-bar mui-bar-nav">
+  <div class="headerImg">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">个人资料</h1>
+  </div>
+  <div class="headerImg3" ng-if="user.id_image_url[0]">
+    <a class="mui-btn" change-authen handler="changeAuthen(user._id,user.login_name)">认证</a>
+  </div>
+</header>
+
+<div ng-repeat="img in user.id_image_url" ng-if="user.id_image_url">
+  <img  ng-src="{{ img }}" alt="认证图片" width="100%" />
+</div>
+
+<ul class="mui-table-view">
+
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right" href="/modify/login_name">
+      <span class="color1" >昵称:</span><span class="edit">{{ user.login_name }}</span>
+    </a>
+  </li>
+
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right" href="/newpassword">
+      <span class="color1">密码:</span><span class="edit">需要修改吗？</span>
+    </a>
+  </li>
+
+  <li class="mui-table-view-cell" ng-if="!user.authened">
+    <a class="mui-navigate-right" href="/identify">
+      <span class="color1">认证:</span>
+      <span ng-show="!user.authened" class="edit">亲，快去认证吧!</span>
+    </a>
+  </li>
+
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right" href="/modify/phone_number">
+      <span class="color1">电话:</span>
+      <span class="edit" ng-if="user.phone_number">{{ user.phone_number }}</span>
+    </a>
+  </li>
+
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right" href="/modify/school">
+      <span class="color1">学校:</span>
+      <span class="edit">{{ user.school }}</span>
+    </a>
+  </li>
+
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right" href="/modify/user_name">
+      <span class="color1">姓名:</span>
+      <span class="edit">{{ user.user_name }}</span>
+    </a>
+  </li>
+
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right" href="/modify/signature">
+      <span class="color1">描述:</span>
+      <span class="edit">{{ user.signature }}</span>
+    </a>
+  </li>
+
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right">
+      <span class="color1">等级:</span>
+      <span class="edit">{{ user.experence }}</span>
+    </a>
+  </li>
+
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right" href="/modify/email">
+      <span class="color1">邮箱:</span>
+      <span class="edit">{{ user.email }}</span>
+    </a>
+  </li>
+
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right" href="/modify/student_number">
+      <span class="color1">学号:</span>
+      <span class="edit">{{ user.student_number }}</span>
+    </a>
+  </li>
+
+</ul>

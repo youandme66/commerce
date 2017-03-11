@@ -1,0 +1,26 @@
+<header class="mui-bar mui-bar-nav">
+  <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  <h1 class="mui-title">修改信息</h1>
+</header>
+
+<form  class="mui-input-group" name="name_form" ng-submit="changeInfo()">
+
+  <div class="mui-input-row" ng-if="modifier.select">
+    <select class="mui-btn mui-btn-block select-box" ng-model='user_data_form.select'>
+      <option value="男">男</option>
+      <option value="女">女</option>
+    </select>
+  </div>
+
+  <div class="mui-input-row" ng-if="!modifier.select">
+    <span id="mod_text" class="color1">{{ modifier.name }}:</span>
+    <input id='mod_input' type="text" ng-model="user_data_form.name" placeholder="{{ modifier.name }}" class="mui-input-clear mui-input" >
+  </div>
+
+
+    <div class="mui-content-padded">
+      <button id='modify' class="mui-btn mui-btn-block mui-btn-primary" type="submit">确认</button>
+    </div>
+    <div class="white"></div>
+
+</form>	  

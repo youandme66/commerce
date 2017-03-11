@@ -1,0 +1,47 @@
+<header class="mui-bar mui-bar-nav">
+  <div class="headerImg">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">个人资料</h1>
+  </div>
+  <div class="headerImg3" ng-if="user.id_image_url">
+    <a class="mui-btn" change-authen handler="changeAuthen(user._id,user.login_name)">认证</a>
+  </div>
+</header>
+
+<div ng-repeat="img in user.id_image_url" ng-if="user.id_image_url">
+  <img  ng-src="{{ img }}" alt="认证图片" width="100%" />
+</div>
+
+<ul class="mui-table-view">
+
+  <li class="mui-table-view-cell" ng-if="user.login_name">
+    <span class="color1" >登录名</span>
+    <span class="edit">{{ user.login_name }}</span>
+  </li>
+
+  <li class="mui-table-view-cell" ng-if="user.phone_number">
+    <span class="color1">电话</span>
+    <span class="edit" >{{ user.phone_number }}</span>
+  </li>
+
+  <li class="mui-table-view-cell">
+    <span class="color1">等级</span>
+    <span class="edit">{{ user.experence }}</span>
+  </li>
+
+  <li class="mui-table-view-cell" ng-if="user.school">
+    <span class="color1">学校</span>
+    <span class="edit">{{ user.school }}</span>
+  </li>
+
+  <li class="mui-table-view-cell" ng-if="user.user_name">
+    <span class="color1">姓名</span>
+    <span class="edit">{{ user.user_name }}</span>
+  </li>
+
+  <li class="mui-table-view-cell" ng-if="user.signature">
+    <span class="color1">描述</span>
+    <span class="edit">{{ user.signature }}</span>
+  </li>
+
+</ul>

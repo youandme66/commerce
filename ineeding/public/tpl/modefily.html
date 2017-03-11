@@ -1,0 +1,25 @@
+<header class="mui-bar mui-bar-nav">
+  <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  <h1 class="mui-title">修改信息</h1>
+</header>
+
+<form  class="mui-input-group" name="name_form" ng-submit="change_login_name()">
+  <div id="tip_out" class="mui-input-row">
+    <input id='tips' type="button" value="不填则不会更改" class="mui-btn" />
+  </div>
+
+  <div class="mui-input-row">
+    <span id="mod_text" class="mui-btn">昵称:</span>
+    <input id='mod_input' type="text" ng-model="user_data_form.login_name" placeholder="昵称" class="mui-input-clear mui-input" >
+  </div>
+
+  <div class="mui-input-row">
+    <span id="mod_text" class="mui-btn">个人简历:</span>
+    <input id='mod_input' type="text" ng-model="user_data_form.signature" placeholder="个人简介" class="mui-input-clear mui-input" >
+  </div>
+
+    <div class="mui-content-padded">
+      <button id='login' class="mui-btn mui-btn-block mui-btn-primary" type="submit">确认</button>
+    </div>
+    <div class="white"></div>
+</form>	  

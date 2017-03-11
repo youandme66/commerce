@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <%if(typeof(message) !== 'undefined'){%>
+    <strong><%= message %></strong>
+    <%}%>
+    <%if(typeof(title) !== 'undefined'){%>
+    <strong><%= title %></strong>
+    <%}%>
+    <%if(typeof(error) !== 'undefined'){%>
+    <strong><%= error %></strong>
+    <%}%>
+  </body>
+</html>

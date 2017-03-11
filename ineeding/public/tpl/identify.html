@@ -1,0 +1,36 @@
+<header class="mui-bar mui-bar-nav">
+  <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  <h1 class="mui-title">认证</h1>
+</header>
+
+<form class="mui-input-group">
+
+  <div class="mui-input-row">
+    <label>真实姓名</label>
+    <input type="text" class="mui-input-clear" ng-model="identify_form.name" placeholder="请输入认证姓名" id="name">
+  </div>
+
+  <div class="mui-input-row">
+    <label >学校</label>
+    <input type="text" class="mui-input-clear" ng-model="identify_form.school" uploadDirective placeholder="请输入学校名">
+  </div>
+
+  <div class="mui-input-row">
+    <h4 class="mui-content-padded">上传图片</h4>
+  </div>
+
+  <div class="mui-input">
+    <div class="discription">请您上传学生证图片资料（点击上传图片）</div>
+  </div>
+
+  <div class="mui-input-row file_box">
+    <input type="file" upload-directive handler="updateIdentifyImage()" id="infor" class="input-picture identify_image" />
+  </div>
+
+  <div class="mui-content-padded">
+    <button type="button" id="login" class="mui-btn mui-btn-primary mui-btn-block" ng-click="identify()">确认</button>
+  </div>
+
+  <div class="white"></div>
+
+</form> 

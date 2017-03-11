@@ -1,0 +1,21 @@
+
+<div class="titl">
+  <span class="line"></span>
+  <h5 class="th4">分类信息</h5>
+</div>
+<ul class="mui-table-view mui-grid-view mui-grid-9">
+  <li class="mui-table-view-cell mui-media mui-col-xs-25 mui-col-sm-3" ng-repeat="item in items">
+    <a ng-href="/tag/{{item.filter}}">
+      <img class="mui-icon" ng-src="{{item.image_url}}" />
+      <div class="mui-media-body">{{item.title}}</div>
+    </a>
+  </li>
+</ul>
+<li class="mui-table-view-cell mui-media" ng-show="global.show_next_page">
+  <div class="wrap">
+    <div class="mui-media-body1">
+      <h5 class="mui-btn"><span ng-click="prePage()">上一页</span></h5>
+      <h5 class="mui-btn"><span ng-click="nextPage()">下一页</span></h5>
+    </div>
+  </div>                
+</li>       

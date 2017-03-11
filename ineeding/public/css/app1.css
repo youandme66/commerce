@@ -1,0 +1,628 @@
+/*--------------------------------------------
+1. index
+--------------------------------------------*/
+
+.error{
+	color: red;
+	text-align: center;
+	border-radius: 6px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 7px;
+	font-size: 15px;
+}
+.mui-col-xs-4 {
+  width: 50%;
+  top: 2px;
+}
+.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar {
+    background-color: #fdb319;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color: #fdb319;
+    border-bottom: 2px solid #fdb319;
+    background: 0 0;
+}
+.mui-col-xs-25 {
+    width: 25%;
+}
+.mui-slider .mui-slider-group .mui-slider-item img {
+    width: 100%;
+    height: 30%;
+}
+.headerImg{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.headerImg1{
+	position: absolute;
+	left: 10px;
+	top: 13px;
+}
+.img1{
+	height: 15px;
+	width: 62px;
+}
+.headerImg2{
+	position: absolute;
+	right: 50px;
+}
+.img2{
+	height: 15px;
+	width: 15px;
+}
+.headerImg3{
+	position: absolute;
+	right: 10px;
+}
+.img3{
+	height: 15px;
+	width: 15px;
+}
+.titl{
+	width: 100%;
+	height:50px;
+	background: #f6f5f5;
+	position: relative;
+}
+.line{
+	width: 3px;
+	height: 40px;
+	background:#fdb319;
+	position: absolute;
+	top: 5px;
+	left: 0px;
+}
+.th4{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: #000;
+}
+.mui-media-body1 {
+    font-size: 0.6em;
+    line-height: 1.5em;
+    display: block;
+    width: 100%;
+    height:80px;
+    margin-top: 8px;
+    text-overflow: ellipsis;
+    color: #333;
+    margin-left: 10px;
+}
+.mui-media-body1{
+	position: relative;
+}
+.tit5{
+	position: absolute;
+	/*left: 10px;*/
+	color: #000000;
+	top: 0px;
+}
+.time{
+	position: absolute;
+	/*left: 10px;*/
+	top: 25px;
+	color:#8f8f94;
+	font-size: 10px;
+}
+.left{
+	position: absolute;
+	/*left: 10px;*/
+	top: 45px;
+	background:#fdb319;
+	border: none;
+	border-radius:3px;
+	color: #FFF;
+	padding: 1px 8px;
+	font-size: 12px;
+}
+.right1{
+	position: absolute;
+	/*left: 10px;*/
+	top:70px;
+}
+.right{
+	position: absolute;
+	/*left: 10px;*/
+	top:65px;
+}
+
+.left1{
+	position: absolute;
+	right: 0px;
+	top: 60px;
+	background:#fdb319;
+	border: none;
+	border-radius:12px;
+	color: #FFF;
+	padding: 1px 8px;
+	font-size: 15px;
+	
+}
+.little{
+ 	color: orange;
+ 	font-weight: bold;
+ 	letter-spacing: 2px;
+ }
+ .box{
+ 	color: #000000;
+ 	font-weight: bold;
+ 	letter-spacing: 2px;
+ }
+ .title{
+ 	position: absolute;
+ 	top: 12px;
+ 	left: 25px;
+ 	font-size: 20px;
+ }
+/*--------------------------------------------
+ 2.list
+--------------------------------------------*/
+.mui-table-view .mui-media-object {
+    line-height: 42px;
+    max-width: 100px;
+    height: 80px;
+    border-radius: 0.3em;
+}
+.wrap{
+	margin-left: 100px;
+}
+.topLink a{
+	color: #000000;
+}
+a{
+}
+/*--------------------------------------------
+ 3.goods
+--------------------------------------------*/
+.mui-content-padded1 {
+    position: relative;
+    margin: 10px;
+}
+p{
+	color: #000;
+}
+.collect{
+	width: 60px;
+	height: 60px;
+	border: none;
+	border-radius: 30px;
+	background: #fbd319;
+	position: relative;
+	top: -45px;
+	left: 76%;
+	z-index: 10;
+	box-shadow: 1px 3px 25px #040000;
+	text-align: center;
+	line-height: 60px;
+	padding: 12px;
+}
+
+.right2{
+	position: absolute;
+	left: 80px;
+	top:45px;
+}
+.content{
+	position: absolute;
+	top: 80px;
+	color: #000000;	
+}
+.posterMessage{
+	width: 100%;
+	margin-top: 60%;
+	padding: 10px;
+	position: relative;
+}
+.line2{
+	width: 100%;
+	height: 1px;
+	background: #000000;
+}
+.userImg{
+	width: 60px;
+	height: 60px;
+	border: none;
+	border-radius: 50px;
+	margin-top: 20px;
+}
+.posterId{
+	float: right;
+	margin-top: 20px;
+	position: absolute;
+	top: 10px;
+	left: 90px;
+}
+/*--------------------------------------------
+ 4.login
+--------------------------------------------*/
+.area {
+	margin: 20px auto 0px auto;
+}
+
+/*.mui-input-group {
+	margin-top: 10px;
+}
+
+.mui-input-group:first-child {
+	margin-top: 20px;
+}*/
+
+.mui-input-group label {
+	width: 33%;
+}
+
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {
+	float: left;
+}
+.mui-input-row{
+}
+.weizhi{
+	position: absolute;
+	right: 5px;
+}
+
+.mui-input-row .mui-btn {
+    width: 32%;
+    bottom: 3px;
+    top: 3px;
+    z-index: 9;
+}
+.mui-checkbox input[type=checkbox],
+.mui-radio input[type=radio] {
+	top: 6px;
+}
+
+.mui-btn {
+	padding: 10px;
+}
+
+.link-area {
+	display: block;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.spliter {
+	color: #bbb;
+	padding: 0px 8px;
+}
+
+.oauth-area {
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	text-align: center;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.oauth-area .oauth-btn {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-size: 30px 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin: 0px 20px;
+	border: solid 1px #ddd;
+	border-radius: 25px;
+}
+
+.oauth-area .oauth-btn:active {
+	border: solid 1px #aaa;
+}
+
+.oauth-area .oauth-btn.disabled {
+	background-color: #ddd;
+}
+.mui-btn-blue, .mui-btn-primary, input[type=submit] {
+    color: #fff;
+    border: 1px solid #fdb319;
+    background-color: #fdb319;
+}
+/*--------------------------------------------
+ 5.personer
+--------------------------------------------*/
+.mui-control-content1 {
+    position: relative;
+    display: block;
+}
+.person{
+	width: 100%;
+	height: 220px;
+	background: #fff;
+	text-align: center;	
+	
+}
+.person1{
+	width: 100%;
+	background: #fff;
+	text-align: center;	
+}
+.person2{
+	width: 100%;
+	background: #fff;
+	text-align: center;	
+	margin-top: 10px;
+}
+.perImg{
+	width: 80px;
+	height: 80px;
+	border:none;
+	border-radius: 50px;
+	margin-top: 50px;
+}
+.icon1{
+	width: 20px;
+	height: 25px;
+	margin-right: 10px;
+}
+.quit{
+	margin-top: 20px;
+}
+.quit2{
+	margin-top: -20px;
+}
+.quitLi{
+	text-align: center;
+}
+.color1{
+	color: #fdb319;
+	float: right;
+	margin-right: 80%;
+	text-align: center;
+}
+.xiugai{
+	width: 100%;
+	padding: 10px;
+	padding-top: 20px;
+}
+/*--------------------------------------------
+ 11.post1
+--------------------------------------------*/
+/*.mui-content-padded{
+	margin-top: 5px;
+}*/
+textarea{
+	margin-bottom: 0;
+}
+option:active{
+	color: #fbd319;
+}
+.local-picture{
+	height: 100px;
+	width: 100px;
+	background-color : #fff;
+}
+.local-camera{
+	background: url(../images/019.png) no-repeat 50% 50%;
+	background-size: 60px 60px;
+	background-color: #ffffff;
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin-left: 3px;
+}
+.file-input{
+	opacity: 0;
+	filter: alpha(opacity=0);
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.yu{
+	height: 100px;
+	width: 100px;
+	background-color: #ffffff;
+	position: relative;
+	float: left;
+	padding: 5px;
+	overflow: hidden;
+	margin-left: 3px;
+}
+/*--------------------------------------------
+ 12.identity
+--------------------------------------------*/
+.s-picture{
+	border: 1px solid #B6B6B6;
+	background-color: #ffffff;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.discription{
+	text-align: center;
+	padding: 10px;
+}
+.file_box{
+	position: absolute;
+	width: 100%;
+	top: 120px;
+}
+.input-picture{
+	opacity: 0;
+	position: absolute;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+}
+.search{
+	margin: 0 auto;
+	width: 80%;
+	display: inline-block;
+}
+.return,
+.next{
+	display: inline;
+	position: relative;
+	top: -13px;	
+}
+.file{
+	width: 100%;
+	height: 130px;
+}
+.file-input-1{
+	opacity: 0;
+	height: 80px;
+	width: 80px;
+	top: 48px;
+	filter: alpha(opacity=0);
+	cursor: pointer;
+	overflow: hidden;
+	position: absolute;
+}
+.mui-btn-block{
+	float: left!important;
+	width: 100%!important;
+}
+.textarea_border{
+	border-bottom: 1px solid gray;
+	border-top: 1px solid gray;
+}
+.camera-box{
+	background-color: #EFEFF4;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	height: 120px;
+}
+.type-box{
+	margin-top: 5px;
+}
+.nothing{
+	height: 80px;
+}
+.mui-bar-nav~.mui-content{
+	padding-top: 44px!important;
+}
+
+/**
+ * 底部导航样式
+ */
+.bottom_nav {position: relative;float: left;padding: 0px;width: 25%;}
+
+.mui-bar .mui-icon {
+  margin-left: 0.2em;
+  padding-bottom: 0.1em;
+}
+.mui-bar-tab .bottom_nav.mui-active {
+    color: #007aff; 
+}
+.mui-bar-tab .bottom_nav {
+	display: table-cell;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	color:#929292;
+}
+.mui-bar-tab .bottom_nav .mui-icon~.mui-tab-label {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/**
+ * 分类信息图片等比例缩小
+ */
+li.mui-table-view-cell.mui-media.mui-col-xs-25.mui-col-sm-3.ng-scope {
+    padding: 0px;
+}
+
+img.mui-icon {
+    width: 100%;
+}
+/**
+ * 个人资料页面对齐
+ */
+.edit {
+    float: left;
+    position: absolute;
+    margin-left: 25%;
+}
+/**
+ * 消息按钮
+ */
+.message_button.mui-btn.ng-scope {
+    width: 100%;
+}
+
+.message_create {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+.message_delete {
+  position:relative;
+  float:right;
+}
+/**
+ * 修改搜索部分
+ */
+span.mui-icon.mui-icon-closeempty.return {
+    width: 10%;
+}
+
+span.mui-icon.mui-icon-undo.next {
+    width: 10%;
+}
+/**
+ * 导航高度
+ */
+nav.mui-bar.mui-bar-tab {
+    line-height: 1em;
+}
+/**
+ * 修改页提示信息
+ */
+input#tips {
+    width: 100%;
+    font-size: 1.2em;
+    font-family: youyuan;
+    color: #d3d2b1;
+}
+span#mod_text {
+    padding: 10px 0px 10px 0px;
+}
+input#mod_input {position: absolute;text-align: left;margin-left: 25%;}
+/**
+ * 重置密码发送短信按钮
+ */
+button.mui-input-clear.mui-input {
+    position: absolute;
+    right: 5px;
+    margin: 3px 0px 3px 1px;
+}
+/**
+ * 翻页对齐
+ */
+.page_button {
+    text-align: center;
+}
+
+/**
+ * 个人信息修改页
+ */
+img.mui-input-clear.mui-input {
+    height: 100%;
+    border: solid 1px #f1ebe1;
+    padding: 3px;
+    margin-left: 11px;
+}
+
+img.upload_pic {
+    width: 100%;
+}
+
+
+

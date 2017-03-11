@@ -1,0 +1,32 @@
+
+  <header class="mui-bar mui-bar-nav">
+   <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">消息</h1>
+  </header>
+
+
+  <div class="mui-table"> 
+    <span class="message_text">内容:</span><textarea class="message_input" type='text' ng-model="message_form.content" ></textarea>
+    <span class="message_text">发送给:</span><input class="message_input" type='text' ng-model="message_form.receiver_phone_number" placeholder="电话号码"></input>
+  </div>
+
+  <div class="message_button mui-btn" width=100%> 
+    <button class="message_create" ng-click="sendMessage()">发送</button>
+    <button class="message_create" ng-click="refresh()">刷新</button>
+  </div>
+
+  <ul id="OA_task_1" class="mui-table-view">
+    <li class="mui-table-view-cell">消息</li>
+    <li class="mui-table-view-cell" ng-repeat="item in items_hasnot_read">
+      <div class="mui-slider-handle">
+        {{ item.content }}
+      </div>
+      <div ng-click="getAuthorInformation(item.author_login_name)">
+        来自：{{ item.author_login_name }}
+      </div>
+      <div>发送时间：{{item.create_at | date: 'y' + '年' + 'M'+ '月' + 'd' + '日'}}
+        <button class="message_delete" ng-click="deleteMessage(item._id)">删除</button>
+      </div>
+    </li>
+
+  </ul>

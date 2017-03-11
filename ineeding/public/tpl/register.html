@@ -1,0 +1,69 @@
+<header class="mui-bar mui-bar-nav">
+      <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+      <h1 class="mui-title">注册</h1>
+    </header>
+      <form class="mui-input-group" name="signup_form" ng-controller="RegController"
+      ng-submit = "signup()">
+        <div class="mui-input-row">
+          <label>昵称</label>
+          <input type="text" ng-model="regdata.login_name" class="mui-input mui-input-clear" placeholder="取个名字吧" />
+        </div>
+        
+        <div class="mui-input-row">
+          <label>手机</label>
+          <input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号" ng-model = "regdata.phone_number"
+          name="phone" ng-minlength="11"
+          required
+          >
+        </div>
+        <div class="mui-input-row" ng-if="(signup_form.phone.$error.minlength ||
+        signup_form.phone.$error.maxength) && signup_form.phone.$touched
+
+          
+          ">
+          <p class="error" >您输入的信息有误！</p>
+        </div>
+        <div class="mui-input-row">
+          <label>密码</label>
+          <input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入6位以上密码" ng-model = "regdata.password"
+          name="password" ng-minlength="6"
+          required>
+        </div>
+        <div class="mui-input-row" ng-if="(signup_form.password.$error.minlength ||
+        signup_form.password.$error.maxength) && signup_form.password.$touched  
+          ">
+          <p class="error" >您输入的信息有误！</p>
+        </div>
+        <div class="mui-input-row">
+          <label>确认</label>
+          <input id='password_confirm' type="password" class="mui-input-clear mui-input" placeholder="请确认密码" ng-model = "regdata.repas"
+          name="repas" required
+          compare="regdata.password">
+        </div>
+        <div class="mui-input-row" ng-if="signup_form.repas.$error.compare &&
+        signup_form.repas.$touched" >
+          <p class="error" >两次输入密码不一致！</p>
+        </div>
+        <div class="mui-input-row">
+          <label>短信验证</label>
+          <input id='email' type="text" class="mui-input-clear mui-input" placeholder="请输入验证码" ng-model ="regdata.vcode">
+          <button type="button" class="mui-btn mui-btn-blue weizhi" id="qqq" >获取验证码</button>
+        </div>
+        <div class="mui-input-row">
+          <label>图片验证码</label>
+          <input type="text" ng-model="regdata.vpic" placeholder="图片中的文字" class="mui-input-clear mui-input"></input>
+        </div>
+        <div class="mui-input-row">
+          <img class="mui-input-clear mui-input" ng-src="{{ src.vpic }}"></img>
+          <button type="button" name="change_pic" ng-click="changePic()" class="mui-btn mui-btn-blue weizhi">换一张?</button>
+        </div>
+        
+         <div class="mui-content-padded">
+        <button id='reg' class="mui-btn mui-btn-block mui-btn-primary"
+         ng-disabled="signup_form.password.$invalid || signup_form.phone_number.$invalid || 
+         signup_form.repas.$invalid
+          ">注册</button>
+      </div>
+      <div class="white"></div>
+      </form>
+     

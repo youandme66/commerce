@@ -1,0 +1,18 @@
+<div class="titl">
+  <span class="line"></span>
+  <h5 class="th4">精品推荐</h5>
+</div>
+<ul class="mui-table-view mui-grid-view">
+
+  <li class="mui-table-view-cell mui-media mui-col-xs-6" ng-repeat="item in items | orderBy:'-price' ">
+    <a href="/items/{{ item._id }}">
+      <img class="mui-media-object" ng-src="{{ item.image_url[0] || 'images/09.png' }}">
+      <div class="mui-media-body1">
+        <h5 class="tit5">{{ item.title }}</h5>
+        <div class="time"><span>{{ item.time }}</span></div>
+        <div class="left"><span>{{ item.handle }}</span></div>
+        <div class="right"><span>{{ item.price }}￥</span></div>
+      </div>
+    </a>
+  </li> 
+</ul>

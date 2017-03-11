@@ -1,0 +1,54 @@
+<header class="mui-bar mui-bar-nav">
+      <h1 class="mui-title">登录</h1>
+      <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    </header>
+      <form id='login-form' class="mui-input-group"
+      ng-submit = "login()" name='login_form'
+      >
+        <div class="mui-input-row">
+          <label>账号</label>
+          <input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号"
+          ng-model = 'userdata.phone_number'
+          name="phone_number"
+          ng-minlength="11"
+          required
+          >
+        </div>
+
+        <div class="mui-input-row" ng-if="(login_form.phone_number.$error.minlength ||
+        login_form.phone_number.$error.maxength) && login_form.phone_number.$touched
+          
+          ">
+          <p class="error" >您输入的信息有误！</p>
+        </div>
+        <div class="mui-input-row">
+          <label>密码</label>
+          <input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码"
+          ng-model = 'userdata.password'
+          name="password"
+          ng-maxlength='16'
+          required
+          >
+        </div>
+        <div class="mui-input-row" ng-if="(login_form.password.$error.minlength ||
+          login_form.password.$error.maxlength) &&
+          login_form.password.$touched
+          ">
+          <p class="error" >您输入的信息有误！</p>
+        </div>
+        <div class="mui-content-padded">
+          <button id='login' class="mui-btn mui-btn-block mui-btn-primary"
+          ng-disabled="login_form.password.$invalid || login_form.phone_number.$invalid
+          "
+          >
+          登录</button>
+        <div class="white"></div>
+        </div>
+      </form>     
+      <div class="mui-content-padded">
+        <div class="link-area"><a id='reg' href="/reg">注册账号</a> <span class="spliter">|</span> <a id='forgetPassword' href="/forget">忘记密码</a>
+        </div>
+      </div>
+      <div class="mui-content-padded oauth-area">
+
+      </div>

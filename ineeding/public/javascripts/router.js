@@ -1,0 +1,87 @@
+angular.module('router', [
+    'ngRoute',
+])
+.config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider) {
+  $routeProvider
+    .when('/',{
+      templateUrl:'tpl/index_slider.html',
+      controller:'HomeController',
+    })
+  //需要对齐路由否则会出bug
+    .when('/person',{
+      templateUrl:'tpl/person.html',
+      controller:'PersonController',
+    })
+    .when('/home',{
+      templateUrl:'tpl/index_slider.html',
+      controller:'HomeController',
+    })
+    .when('/school',{
+      templateUrl:'tpl/school.html',
+      controller:'SchoolController',
+    })
+    .when('/messages',{
+      templateUrl:'tpl/message.html',
+      controller:'MessageController',
+    })
+    .when('/login',{
+      templateUrl:'tpl/login.html',
+      controller:'LoginController',
+    })
+    .when('/search',{
+      templateUrl:'tpl/search.html',
+      controller:'SearchController',
+    })
+    .when('/post',{
+      templateUrl:'tpl/post.html',
+      controller:'PostController',
+    })
+    .when('/tag/:filter',{
+      templateUrl:'tpl/list.html',
+      controller:'ListController',
+    })
+    .when('/forget',{
+      templateUrl:'tpl/forget.html',
+      controller:'ForgetController',
+    })
+    .when('/personlist',{                     //收藏列表
+      templateUrl:'tpl/personlist.html',
+      controller:'CollectionController',
+    })
+    .when('/items/:id',{
+      templateUrl:'tpl/items_slider.html',
+      controller:'InformationController',
+    })
+    .when('/permessage',{                     //个人资料
+      templateUrl:'tpl/perMessage.html',
+      controller:'PerMessageController',
+    })
+    .when('/modify/:id',{
+      templateUrl:'tpl/modify.html',
+      controller:'ModifyController',
+    })
+    .when('/newpassword',{
+      templateUrl:'tpl/new_password.html',
+      controller:'NewPasswordController',
+    })
+    .when('/identify',{
+      templateUrl:'tpl/identify.html',
+      controller:'IdentifyController',
+    })
+    .when('/reg',{
+      templateUrl:'tpl/register.html',
+      controller:'RegController',
+    })
+    .when('/published',{
+      templateUrl:'tpl/list.html',            //我的发布
+      controller:'PublishedController',
+    })
+    .when('/personal_info',{
+      templateUrl: 'tpl/personal_info.html',
+      controller: 'PerinfoController'
+    })
+    .otherwise({
+      redirectTo:'/'
+    });
+    $locationProvider.html5Mode(true);
+}]);

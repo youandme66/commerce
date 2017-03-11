@@ -1,0 +1,19 @@
+<div class="mui-content-padded1">
+  <div class="collect" id="collect" ng-click="change_collection()"><img id="pic" ng-src="{{ global.has_collected ? 'images/016.png':'images/018.png' }}"/></div>
+  <h4 class="tit5">{{ item.title }}</h4>
+  <div class="time"><span>{{ item.create_at | date: "y" + '年' + 'M' + '月' + 'd' + '日' || "不知道什么情况诶" }}</span></div>
+  <div class="left"><span>{{ item.handle }}</span></div>
+  <div class="right2"><span>{{ item.price }}</span>￥</div>
+  <div class="content">
+    <p>{{ item.description }}
+    </p>
+  </div>
+</div>
+<div class="posterMessage">
+  <div class="line2"></div>
+  <img class="userImg" ng-click="getAuthorInformation( item.author_login_name )" src="{{ item.author_profile_image_url || '/images/09.png' }}">
+  <div class="posterId">
+    <p><span>主人</span>&nbsp;&nbsp;<span ng-click="getAuthorInformation( item.author_login_name )">{{ item.author_login_name }}</span></p>
+    <p><span>电话</span>&nbsp;&nbsp;<span ng-click="toAuth()">{{ item.phone_number || '您需要先认证' }}</span></p>
+  </div>
+</div>

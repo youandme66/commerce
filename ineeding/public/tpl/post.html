@@ -1,0 +1,66 @@
+<header class="mui-bar mui-bar-nav">
+  <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  <h1 class="mui-title">我要发布</h1>
+</header>
+
+<form class="mui-input-group" name="postForm" ng-submit="post()">
+
+  <div class="mui-input camera-box" >
+
+    <div class="local-camera" name="local-camera" ng-if="post_button">
+      <input type="file" upload-directive ng-model="post_images" handler="uploadItemImage()" name="upload_name" class="file-input" />
+    </div>  
+
+    <div class="yu" ng-repeat="img in images">
+      <img src="{{ img }}" class="upload_pic" alt=""></img>
+    </div>
+
+  </div>
+
+  <div class="mui-input-row">
+    <label>标题</label>
+    <input type="text" class="mui-input-clear" placeholder="输入标题" ng-model='postdata.title'>
+  </div>
+
+  <div class="mui-input textarea_border">
+    <textarea id="textarea" rows="5" placeholder="描述你的宝贝" ng-model='postdata.description'></textarea>
+  </div>  
+
+  <div class="type-box">
+    <div class="mui-input-row"><h5 class="mui-content-padded">类型</h5></div>
+    <div class="mui-input-row">
+      <select class="mui-btn mui-btn-block select-box" ng-model='postdata.filter'>
+        <option value="手机">手机</option>
+        <option value="生活">生活</option>
+        <option value="学习">学习</option>
+        <option value="数码">数码</option>
+        <option value="出行">出行</option>
+        <option value="时尚">时尚</option>
+        <option value="运动">运动</option>
+        <option value="其他">其他</option>      
+      </select>
+    </div>
+    <div class="mui-input-row"><h5 class="mui-content-padded">方式</h5></div>
+    <div class="mui-input-row">
+      <select class="mui-btn mui-btn-block select-box" ng-model='postdata.handle'>
+        <option value="出租">出租</option>
+        <option value="出售">出售</option>    
+      </select> 
+    </div>
+  </div>
+
+  <div class="mui-input-row">
+    <label>价格</label>
+    <input type="text" class="mui-input-clear" placeholder="输入价格" ng-model='postdata.price'>
+  </div>
+  <div class="mui-input-row">
+    <label>手机</label>
+    <input type="text" class="mui-input-clear" placeholder="输入手机号" ng-model='postdata.phone_number'>
+  </div>  
+
+  <div class="mui-content-padded">
+    <button class="mui-btn mui-btn-block mui-btn-primary">确认</button>
+  </div>
+  <div class="nothing"></div>
+
+</form> 

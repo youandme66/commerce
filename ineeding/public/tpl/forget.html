@@ -1,0 +1,24 @@
+<header class="mui-bar mui-bar-nav">
+  <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  <h1 class="mui-title">重置密码</h1>
+</header>
+<form class="mui-input-group" name="forget">
+  <div class="mui-input-row">
+    <label>手机</label>
+    <input id='email' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号码" ng-model="forget_data.phone_number" name="forget_phone" required ng-minlength="11">
+  </div>
+  <div class="mui-input-row">
+    <label>验证码</label>
+    <input id='email' type="text" class="mui-input-clear mui-input" placeholder="验证码" ng-model="forget_data.vcode" name="vcode" />
+    <button class="mui-input-clear mui-input" ng-click="resetMessage()" >获取验证码</button>
+  </div>
+
+  <div class="mui-input-row" ng-if="(forget.forget_phone.$error.minlength ||
+  forget.forget_phone.$error.maxength) && forget.forget_phone.$touched ">
+    <p class="error" >您输入的信息有误！</p>
+  </div>
+  <div class="mui-content-padded">
+    <button id='sendMail' class="mui-btn mui-btn-block mui-btn-primary" ng-disabled="forget.forget_phone.$invalid" ng-click="resetPass()">提交</button>
+  </div>
+  <div class="white"></div>
+</form>

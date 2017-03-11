@@ -1,0 +1,56 @@
+<div class="person">
+  <div class="file">
+    <input type="file" upload-directive handler="updateUserImage()" class="file-input-1 personal_image" />
+    <img class="perImg" src="{{ user.profile_image_url || '/images/09.png' }}" />
+  </div>
+  <div class="person1" ng-if="global.has_login" >
+    <h4>{{ user.login_name }}</h4>
+    <p><a ng-href="/permessage">查看个人资料</a></p>
+  </div>
+  <div class="person2" ng-if="!global.has_login">
+    <a href="/reg">
+      <button type="button" class="mui-btn mui-btn-warning mui-btn-outlined">
+        注册
+      </button>
+    </a>
+    <a href="/login">
+      <button type="button" class="mui-btn mui-btn-warning mui-btn-outlined">
+        登录
+      </button>
+    </a>
+  </div>
+</div>
+
+<div class="quit2">
+  <ul class="mui-table-view mui-table-view-chevron">
+    <li class="mui-table-view-cell mui-media">
+      <a class="mui-navigate-right" ng-href="/published">
+        <img class="mui-pull-left icon1" src="images/012.png">
+        <div class="mui-media-body">
+          我的发布            
+        </div>
+      </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+      <a class='mui-navigate-right' ng-href="/messages">
+        <img class="mui-pull-left icon1" src="images/014.png">
+        <div class="mui-media-body">
+          我的消息          
+        </div>
+      </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+      <a class="mui-navigate-right" ng-href="/personlist">
+        <img class="mui-pull-left icon1" src="images/015.png">
+        <div class="mui-media-body">
+          我的收藏              
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="quit" id="quit-log" ng-if="global.has_login">
+  <div class="mui-table-view">
+    <div class="mui-table-view-cell quitLi" ng-click='exit()'>退出登录</div>  
+  </div>
+</div>
